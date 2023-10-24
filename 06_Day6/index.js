@@ -6,7 +6,32 @@
  */
 
 function sumOfAllDigits(digits){
-    
+    if(digits < 1) throw new Error(`plz Enter a positive number. You enter ${digits}`);
+    let sumDigits = digits.toString().split('')
+    let sumOfDigArr = 0
+    sumDigits.forEach(num =>{
+        sumOfDigArr += parseInt(num)
+    })
+    return sumOfDigArr
 }
 
-sumOfAllDigits(1234)
+
+function sumOfAllDigits2(digits){
+    if(digits < 1) throw new Error(`plz Enter a positive number. You enter ${digits}`);
+    let sumDigits = digits.toString().split('')
+    let sumOfDigArr = 0
+    for(let i = 0; i < sumDigits.length; i++){
+        sumOfDigArr += parseInt(sumDigits[i])
+    }
+    return sumOfDigArr
+}
+
+console.log(sumOfAllDigits2(12));
+console.log(sumOfAllDigits2(22));
+console.log(sumOfAllDigits2(-22));
+
+// console.log(sumOfAllDigits(12))
+// console.log(sumOfAllDigits(-12))
+// console.log(sumOfAllDigits(23))
+// console.log(sumOfAllDigits(34))
+// console.log(sumOfAllDigits(45))
