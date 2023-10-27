@@ -17,11 +17,11 @@ function calculatesSimpleInterest(pa, ir, td){
     }else{
         throw new Error('Erron 401')
     }
-    return si
+    return si.toFixed(2)
 }
 
 
 console.log(calculatesSimpleInterest(1000.50,5.75,1.5));
-console.log(calculatesSimpleInterest(20000,10,5));
+console.log(calculatesSimpleInterest(20000.33,10,5));
 
 
