@@ -7,9 +7,19 @@
  */
 
 function fizzBuzz(num){
-    for(const n of num){
-        console.log(n);
+    const fizzBuzz = []
+    for(let i = 1; i <= num; i++){
+        if(i % 3 === 0){
+            fizzBuzz.push("fizz")
+        }else if(i % 5 === 0){
+            fizzBuzz.push("buzz")
+        }else if(i % 3 === 0 && i % 5 === 0){
+            fizzBuzz.push("fizzBuzz")
+        }else{
+            fizzBuzz.push(i)
+        }
     }
+    return fizzBuzz
 }
 
-fizzBuzz(5)
+console.log(fizzBuzz(15))
