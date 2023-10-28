@@ -9,12 +9,12 @@
 function fizzBuzz(num){
     const fizzBuzz = []
     for(let i = 1; i <= num; i++){
-        if(i % 3 === 0){
-            fizzBuzz.push("fizz")
+        if(i % 3 === 0 && i % 5 === 0){
+            fizzBuzz.push("fizzBuzz")
         }else if(i % 5 === 0){
             fizzBuzz.push("buzz")
-        }else if(i % 3 === 0 && i % 5 === 0){
-            fizzBuzz.push("fizzBuzz")
+        }else if(i % 3 === 0){
+            fizzBuzz.push("fizz")
         }else{
             fizzBuzz.push(i)
         }
@@ -22,4 +22,4 @@ function fizzBuzz(num){
     return fizzBuzz
 }
 
-console.log(fizzBuzz(15))
+console.log(fizzBuzz(30))
